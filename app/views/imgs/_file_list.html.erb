@@ -1,0 +1,5 @@
+<%= form_tag({controller: 'imgs', action: 'search'}, {remote: true}) do %>
+  <div>ファイル名：<%= text_field_tag 'fname', '', {size: 20} %></div>
+  <div><%= submit_tag 'Search' %></div>
+<% end %>
+<div id="file_list"></div>

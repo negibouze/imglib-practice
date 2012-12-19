@@ -1,0 +1,5 @@
+<ul>
+<% @imgs.each do |img| %>
+  <li><%= link_to img.name, {action: 'img_view', id: img.id}, {remote: true} %></li>
+<% end %>
+</ul>

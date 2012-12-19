@@ -1,0 +1,12 @@
+<%= form_tag({action: 'view'}) do %>
+  <% if !@error.blank? %>
+    <div id="error_explanation">
+      <%= @error %>
+    </div>
+  <% end %>
+
+  <div>User Name : <%= text_field_tag 'username', '', {size: 20} %></div>
+  <div>Password : <%= password_field_tag 'pswd', '', {size: 12} %></div>
+  <%= submit_tag 'Login' %>
+<% end %>
+<%= link_to '初めての方はこちら', {controller: 'users', action: 'new'} %>

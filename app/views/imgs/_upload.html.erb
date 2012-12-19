@@ -1,0 +1,6 @@
+<%= form_tag({controller: 'imgs', action: 'upload'}, {multipart: true, remote: true}) do %>
+  <%= label_tag :data, 'file' %>
+  <%= file_field_tag :data %>
+  <%= submit_tag 'Upload' %>
+<% end %>
+<div id='result'></div>
